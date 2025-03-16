@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dressing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title-container">
+        <img src="Bg/Title.png">
+    </div>    
+    <div class="game-container"> 
+        <div class="block" id="clothing-menu">
+            <h3>Cloth Choosing</h3>
+            <div>
+                <button onclick="showItems('shirt')">Shirt</button>
+                <button onclick="showItems('skirt')">Skirt</button>
+                <button onclick="showItems('shoe')">Shoe</button>
+                <button onclick="showItems('tattoo')">Tattoo</button>
+                <button onclick="showItems('hat')">Hat</button>
+                <button onclick="showItems('ring')">Ring</button>
+            </div>
+            
+            <div class="slider-container">
+                <button id="prevBtn" onclick="prevItem()">&#60;</button>
+                <div class="slider" id="slider">
+                    <div id="items-container"></div>
+                </div>
+                <button id="nextBtn" onclick="nextItem()">&#62;</button>
+            </div>
+        </div>
+        
+        <div class="block" id="character-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Character</h3>
+            <div id="trash-bin">🗑️</div> <!-- Thùng rác nằm trong character-block -->
+            <div class="slider-container">
+                <button onclick="prevCharacter()">&#60;</button>
+                <div class="slider" id="character-slider">
+                    <img src="/cha/cha1.png" alt="Character 1">
+                </div>
+                <button onclick="nextCharacter()">&#62;</button>
+            </div>
+        </div>
+        
+        <div class="block" id="camera-block">
+            <!-- <h3>Camera</h3> -->
+            <div id="camera-container">
+                <video id="camera" autoplay></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div id="camera-controls">
+                    <select id="filter" class="filter-select">
+                        <option value="none">No Filter</option>
+                        <option value="grayscale(100%)">Grayscale</option>
+                        <option value="sepia(100%)">Sepia</option>
+                        <option value="invert(100%)">Invert</option>
+                    </select>
+                    <button onclick="takePhoto()">Chụp</button>
+                    <button onclick="savePhoto()">Lưu</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="block" id="quiz-block">
+                <div id="quiz-container">
+                    <h2 id="question">Loading...</h2>
+                    <button class="sporty" onclick="answer('sporty')">Loading...</button>
+                    <button class="classy" onclick="answer('classy')">Loading...</button>
+                    <button class="edgy" onclick="answer('edgy')">Loading...</button>
+                </div>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

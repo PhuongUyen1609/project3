@@ -1,0 +1,253 @@
+
+#title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#title-container img {
+    width: 110vh; /* Điều chỉnh kích thước tùy ý */
+    max-width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'Spinnenkop';
+    src: url('spinnenkop/Spinnenkop\ DEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {            
+    gap: 20px; 
+    font-family: 'Spinnenkop'; 
+    font-size: 22px;
+    background-color: #FFC0CB;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+.game-container {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: auto auto auto;
+    width: 100vh;
+    height: 80vh;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.block { 
+    border: 3px solid #FF69B4;
+    background: none;
+    padding: 8px; 
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(255, 20, 147, 0.3);
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+#slider img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#clothing-menu { 
+    background: url('Bg/1.png') no-repeat center center;
+    background-size: cover;
+    grid-column: 1; 
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 70vh;
+}
+#clothing-menu img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+}
+#character-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}        
+#character-block { 
+    background: url('Bg/2.png') no-repeat center center;
+    background-size: cover;
+    grid-column: 2; 
+    grid-row: 1/3; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 30vh;
+    height: 70vh;
+    position: relative; /* Để các ảnh bên trong có thể định vị tuyệt đối */
+}
+
+       
+#trash-bin {
+    position: absolute;  /* Cố định trên màn hình */
+    bottom: 20px;  /* Cách đáy 20px */
+    right: 20px;  /* Cách phải 20px */
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 89, 150, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 1000; /* Đảm bảo không bị che */
+}
+
+
+#trash-bin:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+#camera-block {
+    position: relative; /* Quan trọng để button căn chỉnh chính xác */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30vh;
+    height: 31vh;
+    background: url('Bg/3.png') no-repeat center center;
+    background-size: cover;
+}
+
+#camera-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 10px; /* Đặt button sát mép dưới */
+    left: 50%;
+    transform: translateX(-50%);
+}
+#camera-container{
+    width: 100%;
+    height: auto;
+    margin-top: 82px;
+}
+
+#items-container {
+    width: 90%;
+    height: auto; 
+    padding: 15px; 
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#items-container img {
+    width: auto; 
+    height: 200px;
+    margin: 5px; 
+    cursor: grab; 
+    transition: transform 0.2s; 
+}
+
+#quiz-block { 
+    grid-column: 3; 
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #FFC0CB;
+    width: 30vh;
+    height: 31vh;
+}
+
+.slider-container { 
+    width: 25vh;
+    height: 70vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.slider { 
+    width: 25vh;
+    overflow: hidden; 
+    white-space: nowrap; 
+    max-width: 700px; 
+}
+.slider img { 
+    width: 130px; 
+    height: 130px; 
+    object-fit: contain; 
+    display: inline-block; 
+    border-radius: 10px; 
+}
+#character-slider img { 
+    width: 370px; height: 370px; 
+    object-fit: contain; 
+    /* border: 3px solid #FF69B4; */
+    border-radius: 15px; 
+}
+button { 
+    font-family: 'Spinnenkop', Arial, sans-serif; 
+    background-color: #FF1493; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    margin: 5px; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 3px 3px 0px 0px rgba(58, 0, 0, 0.8); /* Thêm hiệu ứng đổ bóng */
+}
+button:hover {
+    background-color: #FF69B4;
+}
+#camera {
+    position: relative;
+    background-color: #FFC0CB;
+    width: 98%;
+    height: 150px;
+    border: 3px solid #FF69B4;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#camera video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+}
+.filter-select {
+    margin-top: 10px;
+}
+.clothing-item {
+    width: 110px;
+    height: auto;
+    position: absolute;
+    cursor: grab;
+}
+.sporty { background-color: #ff70e2; color: white; }
+.classy { background-color: #ff70e3; color: white; }
+.edgy { background-color: #ff70e4; color: white; }
